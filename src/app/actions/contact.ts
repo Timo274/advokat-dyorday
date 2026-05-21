@@ -62,21 +62,28 @@ export async function submitContactForm(
     // Send Email via Resend
     const resendApiKey = process.env.RESEND_API_KEY;
     if (resendApiKey) {
-      const resend = new Resend(resendApiKey);
-      await resend.emails.send({
-        from: 'Сайт Адвоката <onboarding@resend.dev>', // Update with a verified domain later
-        to: 'dordavan@gmail.com',
-        subject: `Нова заявка з сайту від: ${name}`,
-        html: `
-          <h2>Нова заявка на консультацію</h2>
-          <p><strong>Ім'я:</strong> ${name}</p>
-          <p><strong>Телефон:</strong> ${phone}</p>
-          <p><strong>Категорія справи:</strong> ${service || 'Не вказано'}</p>
-          <p><strong>Повідомлення:</strong> ${message || 'Не вказано'}</p>
-          <br/>
-          <p><small>Заявка збережена в базі даних (ID: ${newRequest.id})</small></p>
-        `,
-      });
+      try {
+        const resend = new Resend(resendApiKey);
+        const { error } = await resend.emails.send({
+          from: 'Сайт Адвоката <onboarding@resend.dev>', // Update with a verified domain later
+          to: ['diortima@gmail.com', 'dordavan@gmail.com'],
+          subject: `Нова заявка з сайту від: ${name}`,
+          html: `
+            <h2>Нова заявка на консультацію</h2>
+            <p><strong>Ім'я:</strong> ${name}</p>
+            <p><strong>Телефон:</strong> ${phone}</p>
+            <p><strong>Категорія справи:</strong> ${service || 'Не вказано'}</p>
+            <p><strong>Повідомлення:</strong> ${message || 'Не вказано'}</p>
+            <br/>
+            <p><small>Заявка збережена в базі даних (ID: ${newRequest.id})</small></p>
+          `,
+        });
+        if (error) {
+          console.error('Resend API returned an error:', error);
+        }
+      } catch (emailError) {
+        console.error('Email failed to send, but saved to DB:', emailError);
+      }
     } else {
       console.warn('RESEND_API_KEY is not set. Email was not sent, but saved to DB.');
     }
