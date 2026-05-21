@@ -138,7 +138,6 @@ const jsonLd = {
         postalCode: '01030',
         addressCountry: 'UA',
       },
-      priceRange: '$$',
       hasCredential: {
         '@type': 'EducationalOccupationalCredential',
         credentialCategory: 'Свідоцтво про право на заняття адвокатською діяльністю',
