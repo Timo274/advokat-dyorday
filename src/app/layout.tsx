@@ -94,9 +94,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://lawyer-diodiai.vercel.app',
   },
-  // verification: {
-  //   google: 'ADD_YOUR_GOOGLE_VERIFICATION_CODE_HERE',
-  // },
+  verification: {
+    google: 'C8ica_9WNOrtSsBsrVfmQkPoU4PDH2MHkvmHLKCjMJg',
+  },
   other: {
     'geo.region': 'UA-30',
     'geo.placename': 'Київ',
