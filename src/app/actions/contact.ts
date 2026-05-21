@@ -95,6 +95,26 @@ export async function submitContactForm(
       console.warn('RESEND_API_KEY is not set. Email was not sent.');
     }
 
+    // Send WhatsApp via CallMeBot
+    const waPhone = process.env.WHATSAPP_PHONE;
+    const waApiKey = process.env.WHATSAPP_API_KEY;
+    if (waPhone && waApiKey) {
+      try {
+        const waText = `🚨 *Нова заявка з сайту!*\n\n👤 *Ім'я:* ${name}\n📞 *Телефон:* ${phone}\n📂 *Справа:* ${service || 'Не вказано'}\n📝 *Повідомлення:* ${message || 'Не вказано'}`;
+        const encodedText = encodeURIComponent(waText);
+        const waUrl = `https://api.callmebot.com/whatsapp.php?phone=${waPhone}&text=${encodedText}&apikey=${waApiKey}`;
+        
+        const response = await fetch(waUrl);
+        if (!response.ok) {
+          console.error('WhatsApp message failed to send. Status:', response.status);
+        }
+      } catch (waError) {
+        console.error('Error sending WhatsApp message:', waError);
+      }
+    } else {
+      console.warn('WHATSAPP_PHONE or WHATSAPP_API_KEY is not set. WhatsApp message was not sent.');
+    }
+
     return { success: true };
   } catch (error) {
     console.error('Error submitting form:', error);
