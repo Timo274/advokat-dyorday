@@ -23,7 +23,7 @@ export const SITE_CONFIG = {
   experience: '20+',
   casesCount: '1000+',
   successRate: '98%',
-  domain: 'advokat-dyorday.com.ua',
+  domain: 'lawyer-diodiai.vercel.app',
 };
 
 export const NAV_ITEMS = [

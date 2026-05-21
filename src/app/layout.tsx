@@ -22,7 +22,7 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://advokat-dyorday.com.ua'),
+  metadataBase: new URL('https://lawyer-diodiai.vercel.app'),
   title: {
     default: 'Адвокат Дьордяй Іван Васильович — Кримінальний адвокат у Києві | Захист прав ТЦК',
     template: '%s | Адвокат Дьордяй І.В. Київ',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     'юрист Київ',
     'захист у суді Київ',
   ],
-  authors: [{ name: 'Адвокат Дьордяй Іван Васильович', url: 'https://advokat-dyorday.com.ua' }],
+  authors: [{ name: 'Адвокат Дьордяй Іван Васильович', url: 'https://lawyer-diodiai.vercel.app' }],
   creator: 'Адвокат Дьордяй І.В.',
   publisher: 'Адвокат Дьордяй Іван Васильович',
   formatDetection: {
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'uk_UA',
-    url: 'https://advokat-dyorday.com.ua',
+    url: 'https://lawyer-diodiai.vercel.app',
     siteName: 'Адвокат Дьордяй Іван Васильович',
     title: 'Адвокат Дьордяй Іван Васильович — Кримінальний адвокат у Києві',
     description:
@@ -92,11 +92,11 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://advokat-dyorday.com.ua',
+    canonical: 'https://lawyer-diodiai.vercel.app',
   },
-  verification: {
-    google: 'your-google-verification-code',
-  },
+  // verification: {
+  //   google: 'ADD_YOUR_GOOGLE_VERIFICATION_CODE_HERE',
+  // },
   other: {
     'geo.region': 'UA-30',
     'geo.placename': 'Київ',
@@ -114,16 +114,16 @@ const jsonLd = {
     // Attorney / Person
     {
       '@type': ['Attorney', 'LegalService'],
-      '@id': 'https://advokat-dyorday.com.ua/#attorney',
+      '@id': 'https://lawyer-diodiai.vercel.app/#attorney',
       name: 'Дьордяй Іван Васильович',
       alternateName: 'Адвокат Дьордяй',
       description:
         'Адвокат з понад 20-річним досвідом. Кримінальне право, захист прав громадян при взаємодії з ТЦК та СП, мобілізаційні питання, сімейне, земельне та господарське право.',
-      url: 'https://advokat-dyorday.com.ua',
+      url: 'https://lawyer-diodiai.vercel.app',
       telephone: '+380965077172',
       email: 'dordavan@gmail.com',
-      image: 'https://advokat-dyorday.com.ua/images/main-hero.jpg',
-      logo: 'https://advokat-dyorday.com.ua/images/main-hero.jpg',
+      image: 'https://lawyer-diodiai.vercel.app/images/main-hero.jpg',
+      logo: 'https://lawyer-diodiai.vercel.app/images/main-hero.jpg',
       founder: {
         '@type': 'Person',
         name: 'Дьордяй Іван Васильович',
@@ -191,7 +191,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'Кримінальне право',
               description: 'Захист прав підозрюваних, обвинувачених та потерпілих у кримінальному провадженні',
-              url: 'https://advokat-dyorday.com.ua/poslugy/kryminalne-pravo',
+              url: 'https://lawyer-diodiai.vercel.app/poslugy/kryminalne-pravo',
             },
           },
           {
@@ -200,7 +200,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'Захист прав при взаємодії з ТЦК',
               description: 'Правова допомога громадянам при взаємодії з ТЦК та оскарження рішень ВЛК',
-              url: 'https://advokat-dyorday.com.ua/poslugy/vzayemodiya-z-tck',
+              url: 'https://lawyer-diodiai.vercel.app/poslugy/vzayemodiya-z-tck',
             },
           },
           {
@@ -209,7 +209,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'Мобілізаційні питання',
               description: 'Адміністративний та правовий супровід у питаннях мобілізації',
-              url: 'https://advokat-dyorday.com.ua/poslugy/mobilizatsiyni-pytannya',
+              url: 'https://lawyer-diodiai.vercel.app/poslugy/mobilizatsiyni-pytannya',
             },
           },
           {
@@ -218,7 +218,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'Сімейне право',
               description: 'Розлучення, поділ майна, аліменти, визначення місця проживання дитини',
-              url: 'https://advokat-dyorday.com.ua/poslugy/simeyне-pravo',
+              url: 'https://lawyer-diodiai.vercel.app/poslugy/simeyне-pravo',
             },
           },
           {
@@ -227,7 +227,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'Земельні спори',
               description: 'Захист прав власності на земельні ділянки, вирішення межових спорів',
-              url: 'https://advokat-dyorday.com.ua/poslugy/zemelni-spory',
+              url: 'https://lawyer-diodiai.vercel.app/poslugy/zemelni-spory',
             },
           },
           {
@@ -236,7 +236,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'Майнові спори',
               description: 'Захист права власності, спадкові справи, стягнення боргів',
-              url: 'https://advokat-dyorday.com.ua/poslugy/maynovi-spory',
+              url: 'https://lawyer-diodiai.vercel.app/poslugy/maynovi-spory',
             },
           },
           {
@@ -245,7 +245,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'Господарські спори',
               description: 'Правовий супровід бізнесу та представництво у господарських судах',
-              url: 'https://advokat-dyorday.com.ua/poslugy/gospodarski-spory',
+              url: 'https://lawyer-diodiai.vercel.app/poslugy/gospodarski-spory',
             },
           },
         ],
@@ -277,17 +277,17 @@ const jsonLd = {
     // WebSite
     {
       '@type': 'WebSite',
-      '@id': 'https://advokat-dyorday.com.ua/#website',
-      url: 'https://advokat-dyorday.com.ua',
+      '@id': 'https://lawyer-diodiai.vercel.app/#website',
+      url: 'https://lawyer-diodiai.vercel.app',
       name: 'Адвокат Дьордяй Іван Васильович',
       description: 'Професійний правовий захист у Києві',
-      publisher: { '@id': 'https://advokat-dyorday.com.ua/#attorney' },
+      publisher: { '@id': 'https://lawyer-diodiai.vercel.app/#attorney' },
       inLanguage: 'uk-UA',
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate: 'https://advokat-dyorday.com.ua/blog?q={search_term_string}',
+          urlTemplate: 'https://lawyer-diodiai.vercel.app/blog?q={search_term_string}',
         },
         'query-input': 'required name=search_term_string',
       },
@@ -295,13 +295,13 @@ const jsonLd = {
     // BreadcrumbList for homepage
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://advokat-dyorday.com.ua/#breadcrumb',
+      '@id': 'https://lawyer-diodiai.vercel.app/#breadcrumb',
       itemListElement: [
         {
           '@type': 'ListItem',
           position: 1,
           name: 'Головна',
-          item: 'https://advokat-dyorday.com.ua',
+          item: 'https://lawyer-diodiai.vercel.app',
         },
       ],
     },
