@@ -36,7 +36,7 @@ export const NAV_ITEMS = [
       { label: 'Кримінальне право', href: '/poslugy/kryminalne-pravo' },
       { label: 'Взаємодія з ТЦК', href: '/poslugy/vzayemodiya-z-tck' },
       { label: 'Мобілізаційні питання', href: '/poslugy/mobilizatsiyni-pytannya' },
-      { label: 'Сімейне право', href: '/poslugy/simeyне-pravo' },
+      { label: 'Сімейне право', href: '/poslugy/simeine-pravo' },
       { label: 'Земельні спори', href: '/poslugy/zemelni-spory' },
       { label: 'Майнові спори', href: '/poslugy/maynovi-spory' },
       { label: 'Господарські спори', href: '/poslugy/gospodarski-spory' },
@@ -119,7 +119,7 @@ export const SERVICES: Service[] = [
       'Правова допомога та адміністративний супровід у мобілізаційних та військово-адміністративних питаннях.',
   },
   {
-    slug: 'simeyне-pravo',
+    slug: 'simeine-pravo',
     title: 'Сімейне право',
     shortTitle: 'Сімейне право',
     description:

@@ -218,7 +218,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'Сімейне право',
               description: 'Розлучення, поділ майна, аліменти, визначення місця проживання дитини',
-              url: 'https://lawyer-diordiai.vercel.app/poslugy/simeyне-pravo',
+              url: 'https://lawyer-diordiai.vercel.app/poslugy/simeine-pravo',
             },
           },
           {

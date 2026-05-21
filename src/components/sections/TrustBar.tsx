@@ -10,50 +10,18 @@ interface CounterProps {
   inView: boolean;
 }
 
-const Counter = ({ endValue, duration = 2, inView }: CounterProps) => {
-  const [count, setCount] = useState('0');
-  
+const Counter = ({ endValue, inView }: CounterProps) => {
   // Extract number from string (e.g. "20+" -> 20, "1000+" -> 1000, "98%" -> 98)
   const numericMatch = endValue.match(/\d+/);
-  const numericValue = numericMatch ? parseInt(numericMatch[0], 10) : 0;
   const suffix = endValue.replace(/[0-9]/g, '');
 
-  useEffect(() => {
-    if (!inView || numericValue === 0) return;
-
-    let startTime: number | null = null;
-    let animationFrameId: number;
-
-    const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
-      
-      // Use easeOutQuart for smooth deceleration
-      const easeOut = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(easeOut * numericValue);
-      
-      setCount(currentCount.toString());
-
-      if (progress < 1) {
-        animationFrameId = requestAnimationFrame(animate);
-      } else {
-        setCount(numericValue.toString());
-      }
-    };
-
-    animationFrameId = requestAnimationFrame(animate);
-
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [inView, numericValue, duration]);
-
-  // If it's not a number (e.g. "24/7"), just return the value immediately when in view
   if (!numericMatch) {
-    return <span>{inView ? endValue : ''}</span>;
+    return <span>{endValue}</span>;
   }
 
   return (
     <span>
-      {count}
+      {numericMatch[0]}
       {suffix}
     </span>
   );
