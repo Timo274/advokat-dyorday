@@ -48,6 +48,8 @@ export async function submitContactForm(
   const { name, phone, service, message } = validatedFields.data;
 
   // 3. Process the data (Save to DB & Send Email)
+  let newRequestId = 'не збережено (Vercel)';
+  
   try {
     // Save to Database
     const newRequest = await prisma.contactRequest.create({
@@ -58,7 +60,12 @@ export async function submitContactForm(
         message,
       },
     });
+    newRequestId = newRequest.id;
+  } catch (dbError) {
+    console.error('Failed to save to database (expected on Vercel with SQLite):', dbError);
+  }
 
+  try {
     // Send Email via Resend
     const resendApiKey = process.env.RESEND_API_KEY;
     if (resendApiKey) {
@@ -75,17 +82,17 @@ export async function submitContactForm(
             <p><strong>Категорія справи:</strong> ${service || 'Не вказано'}</p>
             <p><strong>Повідомлення:</strong> ${message || 'Не вказано'}</p>
             <br/>
-            <p><small>Заявка збережена в базі даних (ID: ${newRequest.id})</small></p>
+            <p><small>Заявка збережена в базі даних (ID: ${newRequestId})</small></p>
           `,
         });
         if (error) {
           console.error('Resend API returned an error:', error);
         }
       } catch (emailError) {
-        console.error('Email failed to send, but saved to DB:', emailError);
+        console.error('Email failed to send:', emailError);
       }
     } else {
-      console.warn('RESEND_API_KEY is not set. Email was not sent, but saved to DB.');
+      console.warn('RESEND_API_KEY is not set. Email was not sent.');
     }
 
     return { success: true };
