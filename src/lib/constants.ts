@@ -23,7 +23,7 @@ export const SITE_CONFIG = {
   experience: '20+',
   casesCount: '1000+',
   successRate: '98%',
-  domain: 'lawyer-diodiai.vercel.app',
+  domain: 'lawyer-diordiai.vercel.app',
 };
 
 export const NAV_ITEMS = [
