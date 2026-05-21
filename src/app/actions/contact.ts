@@ -1,7 +1,6 @@
 'use server';
 
 import { z } from 'zod';
-import { prisma } from '@/lib/prisma';
 import { Resend } from 'resend';
 
 // Define the validation schema
@@ -47,24 +46,6 @@ export async function submitContactForm(
 
   const { name, phone, service, message } = validatedFields.data;
 
-  // 3. Process the data (Save to DB & Send Email)
-  let newRequestId = 'не збережено (Vercel)';
-  
-  try {
-    // Save to Database
-    const newRequest = await prisma.contactRequest.create({
-      data: {
-        name,
-        phone,
-        service,
-        message,
-      },
-    });
-    newRequestId = newRequest.id;
-  } catch (dbError) {
-    console.error('Failed to save to database (expected on Vercel with SQLite):', dbError);
-  }
-
   try {
     // Send Email via Resend
     const resendApiKey = process.env.RESEND_API_KEY;
@@ -82,7 +63,7 @@ export async function submitContactForm(
             <p><strong>Категорія справи:</strong> ${service || 'Не вказано'}</p>
             <p><strong>Повідомлення:</strong> ${message || 'Не вказано'}</p>
             <br/>
-            <p><small>Заявка збережена в базі даних (ID: ${newRequestId})</small></p>
+            <p><small>Заявка відправлена з сайту lawyer-diordiai.vercel.app</small></p>
           `,
         });
         if (error) {
