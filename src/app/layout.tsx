@@ -22,7 +22,7 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://lawyer-dordiai.vercel.app'),
+  metadataBase: new URL('https://advokat-dordiai.xyz'),
   title: {
     default: 'Адвокат Дьордяй Іван Васильович — Кримінальний адвокат у Києві | Захист прав ТЦК',
     template: '%s | Адвокат Дьордяй І.В. Київ',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     'юрист Київ',
     'захист у суді Київ',
   ],
-  authors: [{ name: 'Адвокат Дьордяй Іван Васильович', url: 'https://lawyer-dordiai.vercel.app' }],
+  authors: [{ name: 'Адвокат Дьордяй Іван Васильович', url: 'https://advokat-dordiai.xyz' }],
   creator: 'Адвокат Дьордяй І.В.',
   publisher: 'Адвокат Дьордяй Іван Васильович',
   formatDetection: {
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'uk_UA',
-    url: 'https://lawyer-dordiai.vercel.app',
+    url: 'https://advokat-dordiai.xyz',
     siteName: 'Адвокат Дьордяй Іван Васильович',
     title: 'Адвокат Дьордяй Іван Васильович — Кримінальний адвокат у Києві',
     description:
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://lawyer-dordiai.vercel.app',
+    canonical: 'https://advokat-dordiai.xyz',
   },
   verification: {
     google: 'C8ica_9WNOrtSsBsrVfmQkPoU4PDH2MHkvmHLKCjMJg',
@@ -114,16 +114,16 @@ const jsonLd = {
     // Attorney / Person
     {
       '@type': ['Attorney', 'LegalService'],
-      '@id': 'https://lawyer-dordiai.vercel.app/#attorney',
+      '@id': 'https://advokat-dordiai.xyz/#attorney',
       name: 'Дьордяй Іван Васильович',
       alternateName: 'Адвокат Дьордяй',
       description:
         'Адвокат з понад 20-річним досвідом. Кримінальне право, захист прав громадян при взаємодії з ТЦК та СП, мобілізаційні питання, сімейне, земельне та господарське право.',
-      url: 'https://lawyer-dordiai.vercel.app',
+      url: 'https://advokat-dordiai.xyz',
       telephone: '+380965077172',
       email: 'dordavan@gmail.com',
-      image: 'https://lawyer-dordiai.vercel.app/images/main-hero.jpg',
-      logo: 'https://lawyer-dordiai.vercel.app/images/main-hero.jpg',
+      image: 'https://advokat-dordiai.xyz/images/main-hero.jpg',
+      logo: 'https://advokat-dordiai.xyz/images/main-hero.jpg',
       founder: {
         '@type': 'Person',
         name: 'Дьордяй Іван Васильович',
@@ -191,7 +191,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'Кримінальне право',
               description: 'Захист прав підозрюваних, обвинувачених та потерпілих у кримінальному провадженні',
-              url: 'https://lawyer-dordiai.vercel.app/poslugy/kryminalne-pravo',
+              url: 'https://advokat-dordiai.xyz/poslugy/kryminalne-pravo',
             },
           },
           {
@@ -200,7 +200,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'Захист прав при взаємодії з ТЦК',
               description: 'Правова допомога громадянам при взаємодії з ТЦК та оскарження рішень ВЛК',
-              url: 'https://lawyer-dordiai.vercel.app/poslugy/vzayemodiya-z-tck',
+              url: 'https://advokat-dordiai.xyz/poslugy/vzayemodiya-z-tck',
             },
           },
           {
@@ -209,7 +209,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'Мобілізаційні питання',
               description: 'Адміністративний та правовий супровід у питаннях мобілізації',
-              url: 'https://lawyer-dordiai.vercel.app/poslugy/mobilizatsiyni-pytannya',
+              url: 'https://advokat-dordiai.xyz/poslugy/mobilizatsiyni-pytannya',
             },
           },
           {
@@ -218,7 +218,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'Сімейне право',
               description: 'Розлучення, поділ майна, аліменти, визначення місця проживання дитини',
-              url: 'https://lawyer-dordiai.vercel.app/poslugy/simeine-pravo',
+              url: 'https://advokat-dordiai.xyz/poslugy/simeine-pravo',
             },
           },
           {
@@ -227,7 +227,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'Земельні спори',
               description: 'Захист прав власності на земельні ділянки, вирішення межових спорів',
-              url: 'https://lawyer-dordiai.vercel.app/poslugy/zemelni-spory',
+              url: 'https://advokat-dordiai.xyz/poslugy/zemelni-spory',
             },
           },
           {
@@ -236,7 +236,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'Майнові спори',
               description: 'Захист права власності, спадкові справи, стягнення боргів',
-              url: 'https://lawyer-dordiai.vercel.app/poslugy/maynovi-spory',
+              url: 'https://advokat-dordiai.xyz/poslugy/maynovi-spory',
             },
           },
           {
@@ -245,7 +245,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'Господарські спори',
               description: 'Правовий супровід бізнесу та представництво у господарських судах',
-              url: 'https://lawyer-dordiai.vercel.app/poslugy/gospodarski-spory',
+              url: 'https://advokat-dordiai.xyz/poslugy/gospodarski-spory',
             },
           },
         ],
@@ -277,17 +277,17 @@ const jsonLd = {
     // WebSite
     {
       '@type': 'WebSite',
-      '@id': 'https://lawyer-dordiai.vercel.app/#website',
-      url: 'https://lawyer-dordiai.vercel.app',
+      '@id': 'https://advokat-dordiai.xyz/#website',
+      url: 'https://advokat-dordiai.xyz',
       name: 'Адвокат Дьордяй Іван Васильович',
       description: 'Професійний правовий захист у Києві',
-      publisher: { '@id': 'https://lawyer-dordiai.vercel.app/#attorney' },
+      publisher: { '@id': 'https://advokat-dordiai.xyz/#attorney' },
       inLanguage: 'uk-UA',
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate: 'https://lawyer-dordiai.vercel.app/blog?q={search_term_string}',
+          urlTemplate: 'https://advokat-dordiai.xyz/blog?q={search_term_string}',
         },
         'query-input': 'required name=search_term_string',
       },
@@ -295,13 +295,13 @@ const jsonLd = {
     // BreadcrumbList for homepage
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://lawyer-dordiai.vercel.app/#breadcrumb',
+      '@id': 'https://advokat-dordiai.xyz/#breadcrumb',
       itemListElement: [
         {
           '@type': 'ListItem',
           position: 1,
           name: 'Головна',
-          item: 'https://lawyer-dordiai.vercel.app',
+          item: 'https://advokat-dordiai.xyz',
         },
       ],
     },
