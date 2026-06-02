@@ -63,7 +63,7 @@ export async function submitContactForm(
             <p><strong>Категорія справи:</strong> ${service || 'Не вказано'}</p>
             <p><strong>Повідомлення:</strong> ${message || 'Не вказано'}</p>
             <br/>
-            <p><small>Заявка відправлена з сайту lawyer-diordiai.vercel.app</small></p>
+            <p><small>Заявка відправлена з сайту lawyer-dordiai.vercel.app</small></p>
           `,
         });
         if (error) {
