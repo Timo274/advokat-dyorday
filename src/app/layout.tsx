@@ -91,9 +91,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  alternates: {
-    canonical: 'https://advokat-dordiai.xyz',
-  },
+  alternates: {},
   verification: {
     google: 'C8ica_9WNOrtSsBsrVfmQkPoU4PDH2MHkvmHLKCjMJg',
   },

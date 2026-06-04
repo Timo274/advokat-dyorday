@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Hero from '@/components/sections/Hero';
 import TrustBar from '@/components/sections/TrustBar';
 import Services from '@/components/sections/Services';
@@ -7,6 +8,13 @@ import Process from '@/components/sections/Process';
 import Testimonials from '@/components/sections/Testimonials';
 import FAQ from '@/components/sections/FAQ';
 import CTASection from '@/components/sections/CTASection';
+import { SITE_CONFIG } from '@/lib/constants';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: `https://${SITE_CONFIG.domain}`,
+  },
+};
 
 export default function Home() {
   return (
