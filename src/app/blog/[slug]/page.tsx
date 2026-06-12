@@ -34,6 +34,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: `https://${SITE_CONFIG.domain}/blog/${slug}`,
       type: 'article',
       publishedTime: post.date,
+      images: [
+        {
+          url: `https://${SITE_CONFIG.domain}/images/og.jpg`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
   };
 }
@@ -69,7 +77,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       name: 'Адвокат Дьордяй І.В.',
       logo: {
         '@type': 'ImageObject',
-        url: `https://${SITE_CONFIG.domain}/images/main-hero.jpg`
+        url: `https://${SITE_CONFIG.domain}/images/og.jpg`
       }
     }
   };
