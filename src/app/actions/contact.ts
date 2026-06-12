@@ -60,7 +60,7 @@ export async function submitContactForm(
       try {
         const resend = new Resend(resendApiKey);
         const { error } = await resend.emails.send({
-          from: 'Сайт Адвоката <onboarding@resend.dev>', // Update with a verified domain later
+          from: 'Сайт Адвоката <zayavka@advokat-dordiai.xyz>',
           to: 'dordavan@gmail.com',
           subject: `Нова заявка з сайту від: ${name}`,
           html: `
