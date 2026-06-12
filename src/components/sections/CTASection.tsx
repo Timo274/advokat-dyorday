@@ -110,6 +110,15 @@ export default function CTASection() {
                   </div>
                 ) : (
                   <form action={formAction} className="space-y-4 sm:space-y-6">
+                    {/* Honeypot field — invisible to humans, bots fill it in */}
+                    <input
+                      type="text"
+                      name="company"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      aria-hidden="true"
+                      className="absolute left-[-9999px] top-[-9999px] h-0 w-0 opacity-0"
+                    />
                     {state.error && (
                       <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-3 sm:p-4 flex items-start text-red-400 text-sm">
                         <AlertCircle className="w-5 h-5 mr-3 shrink-0" />

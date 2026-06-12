@@ -21,20 +21,8 @@ export const authOptions: NextAuthOptions = {
         });
 
         if (!user) {
-          // If no admin user exists at all, create a default one for the first login
-          const userCount = await prisma.user.count();
-          if (userCount === 0 && credentials.email === 'admin@admin.com') {
-            const hashedPassword = await bcrypt.hash(credentials.password, 10);
-            const newUser = await prisma.user.create({
-              data: {
-                email: credentials.email,
-                password: hashedPassword,
-                name: 'Адміністратор',
-                role: 'ADMIN'
-              }
-            });
-            return { id: newUser.id, email: newUser.email, name: newUser.name, role: newUser.role };
-          }
+          // Security: never auto-create accounts on login.
+          // Admin users must be seeded explicitly (e.g. via a one-off script).
           return null;
         }
 

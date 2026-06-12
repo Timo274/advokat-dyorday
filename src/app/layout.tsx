@@ -67,7 +67,7 @@ export const metadata: Metadata = {
       'Професійний правовий захист у Києві. Кримінальне право, захист прав при взаємодії з ТЦК, мобілізаційні питання, сімейне та земельне право. 20+ років досвіду. 98% успішних справ. Гарантія результату.',
     images: [
       {
-        url: '/images/main-hero.jpg',
+        url: '/images/og.jpg',
         width: 1200,
         height: 630,
         alt: 'Адвокат Дьордяй Іван Васильович — кримінальний адвокат у Києві',
@@ -100,7 +100,6 @@ export const metadata: Metadata = {
     'geo.placename': 'Київ',
     'geo.position': '50.4501;30.5234',
     'ICBM': '50.4501, 30.5234',
-    'revisit-after': '7 days',
     'rating': 'general',
   },
 };
@@ -121,7 +120,7 @@ const jsonLd = {
       telephone: '+380965077172',
       email: 'dordavan@gmail.com',
       image: 'https://advokat-dordiai.xyz/images/main-hero.jpg',
-      logo: 'https://advokat-dordiai.xyz/images/main-hero.jpg',
+      logo: 'https://advokat-dordiai.xyz/images/og.jpg',
       founder: {
         '@type': 'Person',
         name: 'Дьордяй Іван Васильович',
@@ -248,29 +247,6 @@ const jsonLd = {
           },
         ],
       },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '127',
-        bestRating: '5',
-        worstRating: '1',
-      },
-      review: [
-        {
-          '@type': 'Review',
-          author: { '@type': 'Person', name: 'Сергій О.' },
-          datePublished: '2024-09-15',
-          reviewBody: 'Іван Васильович чесно та відкрито роз\'яснив мені ситуацію у справі і дуже швидко з його участю була поставлена крапка.',
-          reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        },
-        {
-          '@type': 'Review',
-          author: { '@type': 'Person', name: 'Володимир А.' },
-          datePublished: '2024-07-20',
-          reviewBody: 'Адвокат домігся моєї повної реабілітації та закриття кримінальної справи через Верховний Суд.',
-          reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        },
-      ],
     },
     // WebSite
     {
@@ -318,7 +294,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

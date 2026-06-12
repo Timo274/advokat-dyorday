@@ -26,6 +26,13 @@ export async function submitContactForm(
   prevState: ContactFormState,
   formData: FormData
 ): Promise<ContactFormState> {
+  // 0. Honeypot check — the "company" field is invisible to humans.
+  // If a bot filled it in, pretend success and drop the submission silently.
+  const honeypot = formData.get('company');
+  if (typeof honeypot === 'string' && honeypot.trim() !== '') {
+    return { success: true };
+  }
+
   // 1. Extract data from FormData
   const rawData = {
     name: formData.get('name') as string,
